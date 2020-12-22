@@ -1,0 +1,238 @@
+body{
+	background-color:white;
+	background-image:url("mountain.png");
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+
+/* CSS personnage (vie mana nom ...) */
+
+.Panneau_perso{
+	display: flex;
+	border: 1px solid black;
+	position: absolute;
+	left: 2%;
+	right: 75%;
+	top: 70%;
+	bottom: 3%;
+	background: white;
+	box-shadow: 3px 3px 10px #000000;
+	border-radius:5px;
+	justify-content:space-around;
+	align-items:center;
+}
+
+
+
+#nom_perso1{
+	display: flex;
+	border: 1px solid black;
+	position: absolute;
+	left: 2%;
+	right: 2%;
+	top: 3%;
+	bottom: 77%;
+	box-shadow: 2px 2px 5px #000000;
+	background-color: grey;
+	justify-content:center;
+	align-items:center;
+	border-radius:5px;
+}
+
+
+
+#case_hp_perso1{
+	display: flex;
+	border: 1px solid black;
+	position: absolute;
+	left: 2%;
+	right: 2%;
+	top: 27%;
+	bottom: 52%;
+	box-shadow: 2px 2px 5px #000000;
+	background-color: grey;
+	justify-content:center;
+	align-items:center;
+	border-radius:5px;
+}
+
+#Hp_perso1{
+	opacity: 1;
+	display: flex;
+	border: 1px solid black;
+	position: absolute;
+	left: 70%;
+	right: 2%;
+	top: 27%;
+	bottom: 52%;
+	box-shadow: 2px 2px 5px #000000;
+	background-color: grey;
+	justify-content:center;
+	align-items:center;
+	border-radius:5px;
+}
+
+
+#case_mana_perso1{
+	display: flex;
+	border: 1px solid black;
+	position: absolute;
+	left: 2%;
+	right: 2%;
+	top: 52%;
+	bottom: 27%;
+	box-shadow: 2px 2px 5px #000000;
+	background-color: grey;
+	justify-content:center;
+	align-items:center;
+	border-radius:5px;
+}
+
+#Mana_perso1{
+	opacity: 1;
+	display: flex;
+	border: 1px solid black;
+	position: absolute;
+	left: 70%;
+	right: 2%;
+	top: 52%;
+	bottom: 27%;
+	box-shadow: 2px 2px 5px #000000;
+	background-color: grey;
+	justify-content:center;
+	align-items:center;
+	border-radius:5px;
+}
+
+
+#case_def_perso1{
+	display: flex;
+	border: 1px solid black;
+	position: absolute;
+	left: 2%;
+	right: 2%;
+	top: 77%;
+	bottom: 3%;
+	box-shadow: 2px 2px 5px #000000;
+	background-color: grey;
+	justify-content:center;
+	align-items:center;
+	border-radius:5px;
+}
+
+#Def_perso1{
+	opacity: 1;
+	display: flex;
+	border: 1px solid black;
+	position: absolute;
+	left: 70%;
+	right: 2%;
+	top: 77%;
+	bottom: 3%;
+	box-shadow: 2px 2px 5px #000000;
+	background-color: grey;
+	justify-content:center;
+	align-items:center;
+	border-radius:5px;
+}
+
+/* Boutons et boite dialogue */
+
+
+#Boite_dialogue{
+	display: flex;
+	border: 3px solid #black;
+	width : 290px;
+	height: 120px;
+	position: absolute;
+	top:53%;
+	left: 50%;
+	background-color: pink;
+	opacity: 0.8;
+	box-shadow: 2px 2px 5px #000000;
+	color: #black;
+	font-size: 13px;
+	justify-content: center;
+	align-items: center;
+
+	
+}
+
+#Action_bouton{
+	
+  display: flex;
+  border: 3px solid black;
+  position: absolute;
+  left: 2.5%;
+  top:5%;
+  width: 325px;
+  height: 435px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background:linear-gradient(white,black);
+  box-shadow: 2px 2px 5px #000000;
+}
+
+.button {
+	display:inline-block;
+	box-shadow: 0px -1px 11px 3px #403d3e;
+	background-color:#DB3613;
+	border-radius:7px;
+	border:2px solid #000000;	
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Times New Roman;
+	font-size:17px;
+	padding:9px 22px;
+	text-decoration:none;
+	border: 1px solid #000000;
+	height: 40px;
+	width: 170px;
+	justify-content: center;
+}
+
+/* Ennemis */
+
+#Image_boss{
+	display: flex;
+	bottom: 85%;
+	right: 35%;
+	top:5%;
+	left:47%;
+	position: absolute;
+	background-image: url("Monstre1.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	padding: 200px;
+}
+
+#InfobulleNom{
+	justify-content: space-around;
+	align-items: center;
+	color:#ffffff;
+	opacity: 0;
+	display:flex;
+	position: absolute;
+	bottom: 85%;
+	right: 47%;
+	top:5%;
+	left:40%;
+	border: 1px solid black;
+	background-color:#333332;
+}
+
+#InfobulleVie{
+	justify-content: space-around;
+	align-items: center;
+	color:#ffffff;
+	opacity: 0;
+	display: flex;
+	position: absolute;
+	bottom: 85%;
+	right: 25%;
+	top:5%;
+	left:65%;
+	border: 1px solid black;
+	background-color:#333332;
+}
