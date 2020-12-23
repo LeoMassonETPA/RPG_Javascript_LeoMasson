@@ -1,4 +1,4 @@
-var atq_joueur= 24;
+var atq_joueur= 24;														//Vraiment désolé pour toutes les majuscules dans les noms de variables j'espère que ça ne vous piquera pas trop les yeux 
 var atq_monstre=12;
 var vie_monstre = 175;
 var vie_joueur= 100;
@@ -18,13 +18,13 @@ var Bouton_defense=document.getElementById("shield");
 var Bouton_special=document.getElementById("spe");
 var Boite_dialogue=document.getElementById("Boite_dialogue");
 var Action_bouton=document.getElementById("Action_bouton");
-var Atq_Disponible=true;
+var Atq_Disponible=true;													//Variables "bouton grisé (non utilisable) quand utilisé au tour d'avant"
 var Def_Disponible=true;
 var Spe_Disponible=true;
-var Atq_Dispo_Monstre=true;
+var Atq_Dispo_Monstre=true;													//Variables "Attaque du monstre ne se déclenche pas si le bouton est grisé"
 var Spe_Dispo_Monstre=true;
 
-Hp_perso1.innerHTML=vie_joueur;
+Hp_perso1.innerHTML=vie_joueur;												//Partie "Affichage dynamique des stats"
 Mana_perso1.innerHTML=mana_joueur;
 Def_perso1.innerHTML=def_joueur;
 InfobulleNom.innerHTML="Reshor l'évadé";
@@ -106,7 +106,7 @@ function Defense(){
 	}
 }
 
-function Special(){
+function Special(){														//Correspond à du poison sur 3 tours
 	Atq_Dispo_Monstre=true; 
 	if (Spe_Disponible==true){
 		Atq_Disponible=true;
