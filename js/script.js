@@ -107,9 +107,9 @@ function Defense(){
 }
 
 function Special(){														//Correspond à du poison sur 3 tours
-	Atq_Dispo_Monstre=true; 
-	if (Spe_Disponible==true){
-		Atq_Disponible=true;
+	Atq_Dispo_Monstre=true; 											//J'ai bien conscience qu'il y a une erreur sur le poison, en effet vous ne pouvez pas le lancer s'il a été utilisé au tour d'avant, mais le compteur de poison tourne quand même.
+	if (Spe_Disponible==true){											//(suite commentaire)Ce qui veut dire que si vous cliquez plusieurs fois sur le poison, le tour est passé et le compteur poison inflique quand même les dégats. Je n'ai pas réussi à corriger ce problème, désolé !
+		Atq_Disponible=true;										
 		Bouton_attaquer.style.backgroundColor="#DB3613";
 		Def_Disponible=true;
 		Bouton_defense.style.backgroundColor="#DB3613";
