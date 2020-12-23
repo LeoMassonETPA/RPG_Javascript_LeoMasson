@@ -1,5 +1,5 @@
 var atq_joueur= 24;														//Vraiment désolé pour toutes les majuscules dans les noms de variables j'espère que ça ne vous piquera pas trop les yeux 
-var atq_monstre=12;
+var atq_monstre=12;														// Les messages de l'info-bulle s'actualisent toutes les 2 secondes, pensez bien à attendre l'affichage avant de lancer une nouvelle action sous peine de ne pas comprendre ce qu'il se passe !
 var vie_monstre = 175;
 var vie_joueur= 100;
 var mana_joueur = 100;
@@ -97,7 +97,7 @@ function Defense(){
 		}
 		vie_joueur -= Math.round(atq_monstre*0.75);
 		Hp_perso1.innerHTML= vie_joueur;
-		Boite_dialogue.innerHTML="Vous vous protégez, le monstre vous inflige " + Math.round(atq_monstre*0.75) + " points de dégâts";
+		Boite_dialogue.innerHTML="Vous réduisez les dégats de 25%, le monstre vous inflige " + Math.round(atq_monstre*0.75) + " points de dégâts";
 		setTimeout(Condition_Victoire, 4000);
 		setTimeout(Condition_Defaite, 4000);
 		if (poison>0){
