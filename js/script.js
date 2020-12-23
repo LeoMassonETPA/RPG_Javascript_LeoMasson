@@ -21,6 +21,8 @@ var Action_bouton=document.getElementById("Action_bouton");
 var Atq_Disponible=true;
 var Def_Disponible=true;
 var Spe_Disponible=true;
+var Atq_Dispo_Monstre=true;
+var Spe_Dispo_Monstre=true;
 
 Hp_perso1.innerHTML=vie_joueur;
 Mana_perso1.innerHTML=mana_joueur;
@@ -61,6 +63,7 @@ function Atq_Monstre(){
 
 
 function Attaquer(){
+	Spe_Dispo_Monstre=true; 
 	if (Atq_Disponible==true){
 		Atq_Disponible=false;
 		Bouton_attaquer.style.backgroundColor="#5B4C49";
@@ -81,6 +84,8 @@ function Attaquer(){
 }
 
 function Defense(){
+	Atq_Dispo_Monstre=true;
+	Spe_Dispo_Monstre=true; 
 	if (Def_Disponible==true){
 		Atq_Disponible=true;
 		Bouton_attaquer.style.backgroundColor="#DB3613";
@@ -93,8 +98,8 @@ function Defense(){
 		vie_joueur -= Math.round(atq_monstre*0.75);
 		Hp_perso1.innerHTML= vie_joueur;
 		Boite_dialogue.innerHTML="Vous vous protégez, le monstre vous inflige " + Math.round(atq_monstre*0.75) + " points de dégâts";
-		setTimeout(Condition_Victoire, 3000);
-		setTimeout(Condition_Defaite, 3000);
+		setTimeout(Condition_Victoire, 4000);
+		setTimeout(Condition_Defaite, 4000);
 		if (poison>0){
 			vie_monstre -= dgt_poison;
 		}
@@ -102,6 +107,7 @@ function Defense(){
 }
 
 function Special(){
+	Atq_Dispo_Monstre=true; 
 	if (Spe_Disponible==true){
 		Atq_Disponible=true;
 		Bouton_attaquer.style.backgroundColor="#DB3613";
@@ -128,28 +134,34 @@ function Check_Poison(){
 
 function Msg_atq(){
 	setTimeout(Attaquer, 0);
-	setTimeout(Atq_Monstre, 1500);
-	setTimeout(Check_Poison, 3000);
-	setTimeout(Condition_Victoire, 3000);
-	setTimeout(Condition_Defaite, 3000);
+	setTimeout(Check_Poison, 4000);
+	setTimeout(Condition_Victoire, 4000);
+	setTimeout(Condition_Defaite, 4000);
+	if (Atq_Dispo_Monstre==true){ 
+		setTimeout(Atq_Monstre, 2000);
+		Atq_Dispo_Monstre=false; 
+	}
 
 }
 
 function Msg_spe(){
 	if (mana_joueur>24){
 		setTimeout(Special, 0);
-		setTimeout(Check_Poison, 1500);
-		setTimeout(Atq_Monstre, 3000);
-		setTimeout(Condition_Victoire, 3000);
-		setTimeout(Condition_Defaite, 3000);
+		setTimeout(Check_Poison, 2000);
+		setTimeout(Condition_Victoire, 4000);
+		setTimeout(Condition_Defaite, 4000);
+		if (Spe_Dispo_Monstre==true){ 
+			setTimeout(Atq_Monstre, 4000);
+			Spe_Dispo_Monstre=false;	
+		}
 	}
 }
 
 function Msg_def(){
 	setTimeout(Defense, 0);
-	setTimeout(Check_Poison, 3000);
-	setTimeout(Condition_Victoire, 3000);
-	setTimeout(Condition_Defaite, 3000);
+	setTimeout(Check_Poison, 4000);
+	setTimeout(Condition_Victoire, 4000);
+	setTimeout(Condition_Defaite, 4000);
 }
 
 
